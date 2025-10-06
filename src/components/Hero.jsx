@@ -1,21 +1,25 @@
 import { Element } from "react-scroll";
 import HeroButtons from "../ui/HeroButtons";
 import HeroImage from "../ui/HeroImage";
+import Heading from "../ui/Heading";
+import { paragraph } from "../Utils/Paragragh";
 
 function Hero() {
   return (
-    <>
+    <section
+      className={`lap:flex z-10 relative lap:flex-row justify-between ${paragraph}`}
+    >
       <Element
         name="hero"
-        className="py-8  flex w-4/5 flex-col mx-auto gap-4 tab:gap-6 "
+        className="py-8 lap:justify-center  flex w-4/5 flex-col lap:text-left  mx-auto lap:mx-0 gap-4 tab:gap-6 lap:w-1/2"
       >
         <div className="space-y-3">
-          <h1 className="font-serif text-4xl tab:text-5xl lap:text-6xl] font-semibold  text-text-header mx-auto text-center w-4/5  ">
+          <Heading>
             Fresh & Tasty{" "}
             <span className="text-primary-default">Small Chops for</span> Every
             Occasion
-          </h1>
-          <p className="text-center tab:w-4/5 tab:mx-auto">
+          </Heading>
+          <p className="text-center tab:w-4/5  lap:text-left tab:mx-auto lap:mx-0">
             Perfectly prepared finger foods delivered to your event, ensuring
             every guest enjoys a tasteful and hassle-free experience
           </p>
@@ -23,7 +27,7 @@ function Hero() {
         <HeroButtons />
       </Element>
       <HeroImage />
-    </>
+    </section>
   );
 }
 

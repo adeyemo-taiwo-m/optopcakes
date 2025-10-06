@@ -36,6 +36,25 @@
   --font-sans: "Poppins", sans-serif;
 }
 
+@theme {
+  @keyframes spinAround {
+    0% {
+      transform: rotate(0deg) translateX(var(--orbit-radius, 150px))
+        rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(var(--orbit-radius, 150px))
+        rotate(-360deg);
+    }
+  }
+}
+
+@layer utilities {
+  .animate-spinAround {
+    animation: spinAround var(--orbit-speed, 8s) linear infinite;
+  }
+}
+
 body {
   box-sizing: border-box;
   font-family: var(--font-sans);

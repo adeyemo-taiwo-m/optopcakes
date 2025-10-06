@@ -9,7 +9,7 @@ function NavLink({ children, to }) {
       offset={-200}
       smooth={true}
       duration={500}
-      className="hover:text-primary-default "
+      className="hover:text-primary-default   "
     >
       {children}
     </Link>
