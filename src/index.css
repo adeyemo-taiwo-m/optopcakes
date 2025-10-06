@@ -28,3 +28,10 @@
   --font-serif: "Playfair Display", serif;
   --font-sans: "Poppins", sans-serif;
 }
+
+* {
+  box-sizing: border-box;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+}
+
