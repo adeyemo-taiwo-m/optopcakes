@@ -2,21 +2,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 @theme {
+  /* Breakpoints */
+  --breakpoint-mob: 640px; /* Mobile / small screens */
+  --breakpoint-tab: 768px; /* Tablets */
+  --breakpoint-lap: 1024px; /* Laptops / small desktops */
+  --breakpoint-desk: 1280px; /* Desktops */
+
   /* pPrimary */
   --color-primary-default: #f3407c;
-  --color-primary-hover: #f3407c;
+  --color-primary-hover: #f85e92;
   --color-primary-active: #ee427c;
   --color-primary-light: #fdd9e5;
 
   /* Secondary */
   --color-secondary-default: #f3407c;
-  --color-secondary-hover: #f3407c;
+  --color-secondary-hover: #4b566c;
   --color-secondary-active: #1e2c47;
   --color-secondary-light: #a5abb5;
   --color-secondary-default: #d2d5da;
 
   /* Text */
   --color-text-header: #283b61;
+  --color-text-body: #797a7b;
 
   /* Border radius */
   --radius-base: 0.25rem; /* 4px */
@@ -29,9 +36,9 @@
   --font-sans: "Poppins", sans-serif;
 }
 
-* {
+body {
   box-sizing: border-box;
   font-family: var(--font-sans);
   font-size: 1rem;
+  color: var(--color-text-body);
 }
-

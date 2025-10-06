@@ -1,7 +1,18 @@
 import React from "react";
+import { HiBars3 } from "react-icons/hi2";
+import Button from "./Button";
+import CartButton from "./CartButton";
 
 function NavButtons() {
-  return <div>NavButtons</div>;
+  return (
+    <div>
+      <HiBars3 size={60} className="text-primary-default lap:hidden" />
+      <div className=" lap:flex gap-8 hidden ">
+        <CartButton />
+        <Button>Get started</Button>
+      </div>
+    </div>
+  );
 }
 
 export default NavButtons;
