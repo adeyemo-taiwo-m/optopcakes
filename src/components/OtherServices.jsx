@@ -9,34 +9,38 @@ import PrevArrow from "../ui/PrevArrow";
 
 import { paragraph } from "../Utils/Paragragh";
 import { productData } from "../assets/data";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import Button from "../ui/Button";
-import { HiArrowSmallRight } from "react-icons/hi2";
+import ServiceCard from "../ui/ServiceCard";
 
 function OtherServices() {
   const settings = {
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 3, // default visible slides
     slidesToScroll: 1,
-    prevArrow: <PrevArrow icon={<FaArrowLeft />} style={"left-0"} />,
-    nextArrow: <Arrow icon={<FaArrowRight />} style={"right-0"} />,
+    centerMode: true, // center the active slide
+    centerPadding: "60px", // show partial prev/next slides
+    dots: true,
     responsive: [
       {
-        breakpoint: 1280,
-        settings: { slidesToShow: 3, slidesToScroll: 1 },
+        breakpoint: 1024, // lap
+        settings: {
+          slidesToShow: 2,
+          centerPadding: "40px",
+        },
       },
       {
-        breakpoint: 1024,
-        settings: { slidesToShow: 2, slidesToScroll: 1 },
+        breakpoint: 768, // tab
+        settings: {
+          slidesToShow: 1,
+          centerPadding: "30px",
+        },
       },
       {
-        breakpoint: 768,
-        settings: { slidesToShow: 1, slidesToScroll: 1 },
-      },
-      {
-        breakpoint: 640,
-        settings: { slidesToShow: 1, slidesToScroll: 1 },
+        breakpoint: 480, // mob
+        settings: {
+          slidesToShow: 1,
+          centerPadding: "20px",
+        },
       },
     ],
   };
@@ -72,10 +76,7 @@ function OtherServices() {
           ))}
         </Slider>
       </div>
-      {/* <div className="text-center mt-10 flex justify-center items-center gap-2.5">
-        <Button icon={<HiArrowSmallRight />}>Order now</Button>
-        <Button type="secondary">View more packages</Button>
-      </div> */}
+      <ServiceCard />
     </section>
   );
 }
