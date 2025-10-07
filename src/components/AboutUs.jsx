@@ -19,7 +19,7 @@ function AboutUs() {
             product quality and delivery also both in decoration, event planning
             and anchoring
           </P>
-          <div className="w-full flex lap:justify-start gap-4  justify-center items-center">
+          <div className="w-full flex flex-col-reverse tab:flex-row lap:justify-start gap-4  justify-center items-center">
             <Button type="primary" className="mt-4   ">
               Contact us
             </Button>{" "}

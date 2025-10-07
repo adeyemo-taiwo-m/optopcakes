@@ -1,46 +1,34 @@
 import { useEffect, useState, useRef } from "react";
 import { motion, useMotionValue, useTransform } from "motion/react";
+import Button from "../ui/Button";
 // replace icons with your own if needed
-import {
-  FiCircle,
-  FiCode,
-  FiFileText,
-  FiLayers,
-  FiLayout,
-} from "react-icons/fi";
-
-import "./Carousel.css";
 
 const DEFAULT_ITEMS = [
   {
-    title: "Text Animations",
-    description: "Cool text animations for your projects.",
+    title: "Cakes",
+    description: "Custom cakes for birthdays, weddings, and events.",
     id: 1,
-    icon: <FiFileText className="carousel-icon" />,
+    img: "/service-img-1.png",
   },
   {
-    title: "Animations",
-    description: "Smooth animations for your projects.",
+    title: "Decoration",
+    description:
+      "Event decoration for weddings, birthdays, engagements, Lying in state.",
     id: 2,
-    icon: <FiCircle className="carousel-icon" />,
+    img: "/service-img-3.png",
   },
   {
-    title: "Components",
-    description: "Reusable components for your projects.",
+    title: "Catering",
+    description: "Full catering for events (main meals, drinks, desserts).",
     id: 3,
-    icon: <FiLayers className="carousel-icon" />,
+    img: "/service-img-4.png",
   },
+
   {
-    title: "Backgrounds",
-    description: "Beautiful backgrounds and patterns for your projects.",
+    title: "Engagement",
+    description: "Traditional engagement setup",
     id: 4,
-    icon: <FiLayout className="carousel-icon" />,
-  },
-  {
-    title: "Common UI",
-    description: "Common UI components are coming soon!",
-    id: 5,
-    icon: <FiCode className="carousel-icon" />,
+    img: "/service-img-2.jpg",
   },
 ];
 
@@ -51,6 +39,7 @@ const SPRING_OPTIONS = { type: "spring", stiffness: 300, damping: 30 };
 
 export default function Carousel({
   items = DEFAULT_ITEMS,
+  width,
   baseWidth = 300,
   autoplay = false,
   autoplayDelay = 3000,
@@ -149,18 +138,21 @@ export default function Carousel({
   return (
     <div
       ref={containerRef}
-      className={`carousel-container ${round ? "round" : ""}`}
+      className={`carousel-container  ${round ? "round" : ""}`}
       style={{
-        width: `${baseWidth}px`,
-        ...(round && { height: `${baseWidth}px`, borderRadius: "50%" }),
+        width: `${width}`,
+        height: "500px",
+
+        ...(round && { height: `${width}`, borderRadius: "50%" }),
       }}
     >
       <motion.div
-        className="carousel-track"
+        className="carousel-track "
         drag="x"
         {...dragProps}
         style={{
           width: itemWidth,
+          height: "95%",
           gap: `${GAP}px`,
           perspective: 1000,
           perspectiveOrigin: `${
@@ -185,21 +177,31 @@ export default function Carousel({
           return (
             <motion.div
               key={index}
-              className={`carousel-item ${round ? "round" : ""}`}
+              className={`carousel-item  bg-cover bg-center ${
+                round ? "round" : ""
+              }`}
               style={{
+                backgroundImage: `url(${item.img})`,
                 width: itemWidth,
-                height: round ? itemWidth : "100%",
+                height: "100%",
                 rotateY: rotateY,
                 ...(round && { borderRadius: "50%" }),
               }}
               transition={effectiveTransition}
             >
-              <div className={`carousel-item-header ${round ? "round" : ""}`}>
-                <span className="carousel-icon-container">{item.icon}</span>
-              </div>
+              <div
+                className={`carousel-item-header ${round ? "round" : ""}`}
+              ></div>
               <div className="carousel-item-content">
-                <div className="carousel-item-title">{item.title}</div>
-                <p className="carousel-item-description">{item.description}</p>
+                <div className="space-y-4 inset-0 p-4 w-3/4 bg-black/30 backdrop-blur-md rounded-lg">
+                  <div>
+                    <div className="carousel-item-title">{item.title}</div>
+                    <p className="carousel-item-description">
+                      {item.description}
+                    </p>
+                  </div>
+                  <Button>Learn more</Button>
+                </div>
               </div>
             </motion.div>
           );

@@ -1,55 +1,27 @@
 import Heading from "../ui/Heading";
-import HeroInfoCard from "../ui/HeroInfoCard";
 import P from "../ui/P";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
-import Arrow from "../ui/Arrow";
-import PrevArrow from "../ui/PrevArrow";
 
 import { paragraph } from "../Utils/Paragragh";
-import { productData } from "../assets/data";
-import ServiceCard from "../ui/ServiceCard";
+
+import ServiceCarousel from "../ui/ServiceCarousel";
+import { useEffect, useState } from "react";
 
 function OtherServices() {
-  const settings = {
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3, // default visible slides
-    slidesToScroll: 1,
-    centerMode: true, // center the active slide
-    centerPadding: "60px", // show partial prev/next slides
-    dots: true,
-    responsive: [
-      {
-        breakpoint: 1024, // lap
-        settings: {
-          slidesToShow: 2,
-          centerPadding: "40px",
-        },
-      },
-      {
-        breakpoint: 768, // tab
-        settings: {
-          slidesToShow: 1,
-          centerPadding: "30px",
-        },
-      },
-      {
-        breakpoint: 480, // mob
-        settings: {
-          slidesToShow: 1,
-          centerPadding: "20px",
-        },
-      },
-    ],
-  };
+  const [baseWidth, setBaseWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setBaseWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <section
-      className={`relative w-full mx-auto rounded-tl-[50px] rounded-tr-[50px] ${paragraph} py-14 bg-secondary-default overflow-visible`}
+      className={`relative w-full mx-auto  ${paragraph} py-14 bg-secondary-default overflow-visible`}
     >
-      <div className="space-y-3 pt-10">
+      <div className="space-y-3 pt-4 relative">
         <Heading type="h2" otherStyle={"text-white opacity-90"}>
           Other Services
         </Heading>
@@ -58,25 +30,26 @@ function OtherServices() {
           custom cakes and elegant decorations to full catering and traditional
           engagement setups, all tailored to make your occasion unforgettable
         </P>
+        <span className="text-primary-default absolute right-0  w-full text-right  lap:hidden text-sm">
+          {"Swipe>>>"}
+        </span>
       </div>
 
-      {/* Slider Section */}
-      <div className="relative mt-10 ">
-        <Slider {...settings}>
-          {productData.map((data, i) => (
-            <div key={i} className="px-2">
-              <HeroInfoCard
-                imageName={data.imageName}
-                title={data.title}
-                price={data.price}
-              >
-                {data.description}
-              </HeroInfoCard>
-            </div>
-          ))}
-        </Slider>
+      {/* Carousel */}
+      <div
+        style={{ position: "relative" }}
+        className="flex justify-center mt-16 items-center"
+      >
+        <ServiceCarousel
+          baseWidth={baseWidth}
+          width="100%"
+          autoplay={true}
+          autoplayDelay={3000}
+          pauseOnHover={true}
+          loop={true}
+          round={false}
+        />
       </div>
-      <ServiceCard />
     </section>
   );
 }

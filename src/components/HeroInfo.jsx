@@ -43,7 +43,7 @@ function HeroInfo() {
 
   return (
     <section
-      className={`relative w-full mx-auto rounded-tl-[50px] rounded-tr-[50px] ${paragraph} py-14 bg-primary-light overflow-visible`}
+      className={`relative w-full mx-auto rounded-tl-[50px] rounded-tr-[50px] ${paragraph} py-14 bg-primary-light `}
     >
       <div className="space-y-3 pt-10">
         <Heading type="h2">Popular Small Chops</Heading>
@@ -54,10 +54,10 @@ function HeroInfo() {
       </div>
 
       {/* Slider Section */}
-      <div className="relative mt-10 ">
+      <div className="relative mt-10 w-full ">
         <Slider {...settings}>
           {productData.map((data, i) => (
-            <div key={i} className="px-2">
+            <div key={i} className="px-2 !block">
               <HeroInfoCard
                 imageName={data.imageName}
                 title={data.title}
@@ -69,9 +69,10 @@ function HeroInfo() {
           ))}
         </Slider>
       </div>
+
       <div className="text-center mt-10 flex justify-center items-center gap-2.5">
         <Button icon={<HiArrowSmallRight />}>Order now</Button>
-        <Button type="secondary">View more packages</Button>
+        <Button type="secondary">View more </Button>
       </div>
     </section>
   );

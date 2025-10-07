@@ -4,6 +4,8 @@ import HeroVector from "./ui/HeroVector";
 import HeroInfo from "./components/HeroInfo";
 import AboutUs from "./components/AboutUs";
 import OtherServices from "./components/OtherServices";
+import Gallery from "./components/Gallery";
+import Testimonials from "./components/Testimonials";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <HeroInfo />
       <AboutUs />
       <OtherServices />
+      <Gallery />
+      <Testimonials />
     </div>
   );
 }
