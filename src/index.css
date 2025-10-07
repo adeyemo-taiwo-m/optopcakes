@@ -15,11 +15,10 @@
   --color-primary-light: #fdd9e5;
 
   /* Secondary */
-  --color-secondary-default: #f3407c;
+  --color-secondary-default: #1e2c47;
   --color-secondary-hover: #4b566c;
   --color-secondary-active: #1e2c47;
   --color-secondary-light: #a5abb5;
-  --color-secondary-default: #d2d5da;
 
   /* Text */
   --color-text-header: #283b61;
@@ -29,6 +28,7 @@
   --radius-base: 0.25rem; /* 4px */
   --radius-sm: 0.375rem; /* 6px */
   --radius-md: 0.75rem; /* 12px */
+  --radius-lg: 1.5rem; /* 24px */
   --radius-xl: 12.5rem; /* 200px */
 
   /*  Font */
@@ -60,4 +60,33 @@ body {
   font-family: var(--font-sans);
   font-size: 1rem;
   color: var(--color-text-body);
+}
+
+/* Reset default slick dot before */
+.slick-dots li button::before {
+  content: ""; /* removes default black circle */
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+  background-color: #cbd5e1; /* gray for inactive dot */
+  opacity: 1;
+}
+
+/* slick default arrows */
+.slick-prev,
+.slick-next {
+  width: 40px;
+  height: 40px;
+  background-color: #2563eb; /* blue */
+  border-radius: 50%; /* round */
+  z-index: 20;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* hover effect */
+.slick-prev:hover,
+.slick-next:hover {
+  background-color: #1e40af; /* darker blue */
 }

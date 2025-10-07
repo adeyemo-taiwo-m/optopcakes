@@ -1,5 +1,9 @@
-function P({ children }) {
-  return <p className="text-center tab:w-4/5   tab:mx-auto ">{children}</p>;
+function P({ children, otherStyle }) {
+  return (
+    <p className={`text-center tab:w-4/5   tab:mx-auto ${otherStyle} `}>
+      {children}
+    </p>
+  );
 }
 
 export default P;
