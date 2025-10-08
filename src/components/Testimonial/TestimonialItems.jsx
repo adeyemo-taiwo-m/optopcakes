@@ -1,6 +1,6 @@
 import React from "react";
 import TestimonialItem from "./TestimonialItem";
-import { TESTIMONIALS } from "../assets/data";
+import { TESTIMONIALS } from "../../assets/data";
 
 function TestimonialItems() {
   return (

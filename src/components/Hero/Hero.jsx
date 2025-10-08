@@ -1,8 +1,8 @@
 import { Element } from "react-scroll";
-import HeroButtons from "../ui/HeroButtons";
-import HeroImage from "../ui/HeroImage";
-import Heading from "../ui/Heading";
-import { paragraph } from "../Utils/Paragragh";
+import HeroButtons from "../../ui/HeroButtons";
+import HeroImage from "./HeroImage";
+import Heading from "../../ui/Heading";
+import { paragraph } from "../../Utils/Paragragh";
 
 function Hero() {
   return (

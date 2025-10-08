@@ -70,7 +70,7 @@ export const SERVICES_ITEMS = [
     title: "Engagement",
     description: "Traditional engagement setup",
     id: 4,
-    img: "/service-img-2.jpg",
+    img: "/service-img-2.png",
   },
 ];
 

@@ -1,16 +1,16 @@
-import Heading from "../ui/Heading";
-import HeroInfoCard from "../ui/HeroInfoCard";
-import P from "../ui/P";
+import Heading from "../../ui/Heading";
+import HeroInfoCard from "./HeroInfoCard";
+import P from "../../ui/P";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import Arrow from "../ui/Arrow";
-import PrevArrow from "../ui/PrevArrow";
+import Arrow from "../../ui/Arrow";
+import PrevArrow from "../../ui/PrevArrow";
 
-import { paragraph } from "../Utils/Paragragh";
-import { productData } from "../assets/data";
+import { paragraph } from "../../Utils/Paragragh";
+import { productData } from "../../assets/data";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import Button from "../ui/Button";
+import Button from "../../ui/Button";
 import { HiArrowSmallRight } from "react-icons/hi2";
 
 function HeroInfo() {

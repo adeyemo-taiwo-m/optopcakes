@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Heading from "./Heading";
-import Button from "./Button";
+import Heading from "../../ui/Heading";
+import Button from "../../ui/Button";
 
 function HeroInfoCard({ title, children, price, imageName }) {
   const [quantity, setQuantity] = useState(1);

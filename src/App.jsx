@@ -9,6 +9,7 @@ import Testimonials from "./components/Testimonials";
 import Booking from "./components/Booking";
 import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
+import MotionTest from "./ui/MotionTest";
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
       <Booking />
       <FAQ />
       <Footer />
+
+      {/* <MotionTest /> */}
     </div>
   );
 }

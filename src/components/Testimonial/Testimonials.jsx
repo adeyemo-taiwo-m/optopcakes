@@ -1,8 +1,8 @@
 import React from "react";
-import Heading from "../ui/Heading";
-import P from "../ui/P";
-import { paragraph } from "../Utils/Paragragh";
-import TestimonialItems from "../ui/TestimonialItems";
+import Heading from "../../ui/Heading";
+import P from "../../ui/P";
+import { paragraph } from "../../Utils/Paragragh";
+import TestimonialItems from "../../ui/TestimonialItems";
 
 function Testimonials() {
   return (

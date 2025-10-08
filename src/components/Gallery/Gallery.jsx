@@ -1,8 +1,8 @@
 import React from "react";
-import { paragraph } from "../Utils/Paragragh";
-import Heading from "../ui/Heading";
-import P from "../ui/P";
-import GridImages from "../ui/GridImages";
+import { paragraph } from "../../Utils/Paragragh";
+import Heading from "../../ui/Heading";
+import P from "../../ui/P";
+import GridImages from "./GridImages";
 
 function Gallery() {
   return (

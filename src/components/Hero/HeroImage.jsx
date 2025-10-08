@@ -1,4 +1,4 @@
-import SpinImage from "./SpinImage";
+import SpinImage from "../HeroInfo/SpinImage";
 
 function HeroImage() {
   const imageArr = Array.from({ length: 4 }, (_, i) => i + 1);

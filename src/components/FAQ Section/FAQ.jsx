@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Heading from "../ui/Heading";
-import P from "../ui/P";
-import { paragraph } from "../Utils/Paragragh";
+import Heading from "../../ui/Heading";
+import P from "../../ui/P";
+import { paragraph } from "../../Utils/Paragragh";
 
 function FAQ() {
   const faqs = [

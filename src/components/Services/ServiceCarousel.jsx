@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { motion, useMotionValue, useTransform } from "motion/react";
-import Button from "../ui/Button";
-import { SERVICES_ITEMS } from "../assets/data";
+import Button from "../../ui/Button";
+import { SERVICES_ITEMS } from "../../assets/data";
 // replace icons with your own if needed
 
 const DRAG_BUFFER = 0;

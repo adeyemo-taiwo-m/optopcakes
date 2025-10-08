@@ -1,9 +1,9 @@
 import React from "react";
-import { paragraph } from "../Utils/Paragragh";
+import { paragraph } from "../../Utils/Paragragh";
 import { FaWhatsapp } from "react-icons/fa";
-import Heading from "../ui/Heading";
-import Input from "../ui/Input";
-import Button from "../ui/Button";
+import Heading from "../../ui/Heading";
+import Input from "../../ui/Input";
+import Button from "../../ui/Button";
 
 function Booking() {
   const inputFields = [

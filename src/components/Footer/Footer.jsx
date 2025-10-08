@@ -4,10 +4,10 @@ import {
   FaPhoneAlt,
   FaWhatsapp,
 } from "react-icons/fa";
-import { paragraph } from "../Utils/Paragragh";
-import FooterLink from "../ui/FooterLink";
+import { paragraph } from "../../Utils/Paragragh";
+import FooterLink from "./FooterLink";
 import { FaXTwitter } from "react-icons/fa6";
-import ContactLink from "../ui/ContactLink";
+import ContactLink from "./ContactLink";
 
 function Footer() {
   return (

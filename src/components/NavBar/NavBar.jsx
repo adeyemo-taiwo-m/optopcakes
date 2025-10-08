@@ -1,9 +1,9 @@
 import { useState } from "react";
-import Logo from "../ui/Logo";
-import MobileNav from "../ui/MobileNav";
-import NavButtons from "../ui/NavButtons";
-import NavLinks from "../ui/NavLinks";
-import { paragraph } from "../Utils/Paragragh";
+import Logo from "../../ui/Logo";
+import MobileNav from "./MobileNav";
+import NavButtons from "./NavButtons";
+import NavLinks from "../../ui/NavLinks";
+import { paragraph } from "../../Utils/Paragragh";
 
 const NavBar = () => {
   const [isOpenNav] = useState(false);

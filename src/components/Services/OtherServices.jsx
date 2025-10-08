@@ -1,11 +1,11 @@
-import Heading from "../ui/Heading";
-import P from "../ui/P";
+import Heading from "../../ui/Heading";
+import P from "../../ui/P";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import { paragraph } from "../Utils/Paragragh";
+import { paragraph } from "../../Utils/Paragragh";
 
-import ServiceCarousel from "../ui/ServiceCarousel";
+import ServiceCarousel from "../../ui/ServiceCarousel";
 import { useEffect, useState } from "react";
 
 function OtherServices() {

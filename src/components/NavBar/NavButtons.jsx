@@ -1,7 +1,7 @@
 import React from "react";
 import { HiBars3 } from "react-icons/hi2";
-import Button from "./Button";
-import CartButton from "./CartButton";
+import Button from "../../ui/Button";
+import CartButton from "../../ui/CartButton";
 
 function NavButtons() {
   return (

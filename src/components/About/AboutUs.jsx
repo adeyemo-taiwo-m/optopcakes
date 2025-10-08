@@ -1,6 +1,6 @@
-import Button from "../ui/Button"; // Assuming you have a Button component
-import Heading from "../ui/Heading";
-import P from "../ui/P";
+import Button from "../../ui/Button"; // Assuming you have a Button component
+import Heading from "../../ui/Heading";
+import P from "../../ui/P";
 
 function AboutUs() {
   return (
