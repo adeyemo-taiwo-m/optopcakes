@@ -6,6 +6,9 @@ import AboutUs from "./components/AboutUs";
 import OtherServices from "./components/OtherServices";
 import Gallery from "./components/Gallery";
 import Testimonials from "./components/Testimonials";
+import Booking from "./components/Booking";
+import FAQ from "./components/FAQ";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -18,6 +21,9 @@ function App() {
       <OtherServices />
       <Gallery />
       <Testimonials />
+      <Booking />
+      <FAQ />
+      <Footer />
     </div>
   );
 }

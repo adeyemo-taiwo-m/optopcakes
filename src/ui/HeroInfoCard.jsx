@@ -20,7 +20,7 @@ function HeroInfoCard({ title, children, price, imageName }) {
       )}
 
       {/* Card */}
-      <div className="bg-white  w-3/5 tab:w-9/10   rounded-lg shadow-md pt-16 p-4 relative z-0">
+      <div className="bg-white w-4/5 tab:w-3/5 lap:w-full desk:w-4/5   rounded-lg shadow-md pt-16 p-4 relative z-0">
         {/* Title */}
         <Heading type="h3" className="text-center">
           {title}

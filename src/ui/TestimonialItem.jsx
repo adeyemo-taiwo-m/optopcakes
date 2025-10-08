@@ -1,20 +1,20 @@
 import React from "react";
 import { HiOutlineStar, HiStar } from "react-icons/hi2";
 
-function TestimonialItem() {
+function TestimonialItem({ data }) {
+  const { review, name, location, rating, img } = data;
+  //   Yet to complete this section
+
   return (
-    <div class="max-w-lg  mx-auto p-6 bg-white min-w-md rounded-2xl shadow-md">
-      <p class="text-gray-700 text-base text-center mb-4">
-        “This is the best service I’ve ever used. Everything was seamless and
-        professional from start to finish!”
-      </p>
+    <li class="max-w-lg  mx-auto p-6 bg-white min-w-md rounded-2xl shadow-md">
+      <p class="text-gray-700 text-base text-center mb-4">{review}</p>
 
       <div class="border-t border-gray-200 my-4"></div>
 
       <div class="flex items-center justify-between">
         <div class="flex items-center gap-3">
           <img
-            src="/hero-profile-1.png"
+            src={img}
             alt="User"
             class="w-12 h-12 rounded-full object-cover"
           />
@@ -32,7 +32,7 @@ function TestimonialItem() {
           <HiOutlineStar color="var(--color-primary-default)" />
         </div>
       </div>
-    </div>
+    </li>
   );
 }
 

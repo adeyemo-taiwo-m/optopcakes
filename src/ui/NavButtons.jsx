@@ -6,7 +6,10 @@ import CartButton from "./CartButton";
 function NavButtons() {
   return (
     <div>
-      <HiBars3 size={60} className="text-primary-default lap:hidden" />
+      <HiBars3
+        size={40}
+        className="text-primary-default lap:hidden cursor-pointer"
+      />
       <div className=" lap:flex gap-8 hidden ">
         <CartButton />
         <Button>Get started</Button>

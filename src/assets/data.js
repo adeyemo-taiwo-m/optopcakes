@@ -82,7 +82,7 @@ export const TESTIMONIALS = [
     name: "Taiwo",
     location: "Lagos , Nigeria",
     rating: "4",
-    img: "/hero-profile-1",
+    img: "/testimonial-image-1.png",
   },
   {
     review:
@@ -90,7 +90,7 @@ export const TESTIMONIALS = [
     name: "",
     location: "",
     rating: "",
-    img: "",
+    img: "/testimonial-image-2.png",
   },
   {
     review:
@@ -98,7 +98,7 @@ export const TESTIMONIALS = [
     name: "",
     location: "",
     rating: "",
-    img: "",
+    img: "/testimonial-image-3.png",
   },
   {
     review:
@@ -106,7 +106,7 @@ export const TESTIMONIALS = [
     name: "",
     location: "",
     rating: "",
-    img: "",
+    img: "/testimonial-image-4.png",
   },
   {
     review:
@@ -114,7 +114,7 @@ export const TESTIMONIALS = [
     name: "",
     location: "",
     rating: "",
-    img: "",
+    img: "/testimonial-image-5.png",
   },
   {
     review:
@@ -122,7 +122,7 @@ export const TESTIMONIALS = [
     name: "",
     location: "",
     rating: "",
-    img: "",
+    img: "/testimonial-image-6.png",
   },
   {
     review:
@@ -130,7 +130,7 @@ export const TESTIMONIALS = [
     name: "",
     location: "",
     rating: "",
-    img: "",
+    img: "/testimonial-image-7.png",
   },
   {
     review:
@@ -138,6 +138,6 @@ export const TESTIMONIALS = [
     name: "",
     location: "",
     rating: "",
-    img: "",
+    img: "/testimonial-image-8.png",
   },
 ];
