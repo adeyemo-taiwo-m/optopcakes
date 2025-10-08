@@ -1,36 +1,8 @@
 import { useEffect, useState, useRef } from "react";
 import { motion, useMotionValue, useTransform } from "motion/react";
 import Button from "../ui/Button";
+import { SERVICES_ITEMS } from "../assets/data";
 // replace icons with your own if needed
-
-const DEFAULT_ITEMS = [
-  {
-    title: "Cakes",
-    description: "Custom cakes for birthdays, weddings, and events.",
-    id: 1,
-    img: "/service-img-1.png",
-  },
-  {
-    title: "Decoration",
-    description:
-      "Event decoration for weddings, birthdays, engagements, Lying in state.",
-    id: 2,
-    img: "/service-img-3.png",
-  },
-  {
-    title: "Catering",
-    description: "Full catering for events (main meals, drinks, desserts).",
-    id: 3,
-    img: "/service-img-4.png",
-  },
-
-  {
-    title: "Engagement",
-    description: "Traditional engagement setup",
-    id: 4,
-    img: "/service-img-2.jpg",
-  },
-];
 
 const DRAG_BUFFER = 0;
 const VELOCITY_THRESHOLD = 500;
@@ -38,7 +10,7 @@ const GAP = 16;
 const SPRING_OPTIONS = { type: "spring", stiffness: 300, damping: 30 };
 
 export default function Carousel({
-  items = DEFAULT_ITEMS,
+  items = SERVICES_ITEMS,
   width,
   baseWidth = 300,
   autoplay = false,

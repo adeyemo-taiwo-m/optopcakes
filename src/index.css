@@ -231,3 +231,12 @@ body {
 .carousel-indicator.inactive {
   background-color: #555;
 }
+
+/* SCroll bar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
