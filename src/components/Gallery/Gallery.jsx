@@ -4,9 +4,13 @@ import Heading from "../../ui/Heading";
 import P from "../../ui/P";
 import GridImages from "./GridImages";
 
+// eslint-disable-next-line
+import { motion } from "motion/react";
+import { fadeUpSection } from "../../Utils/helpers";
+
 function Gallery() {
   return (
-    <section className={` ${paragraph} space-y-8`}>
+    <motion.section {...fadeUpSection()} className={` ${paragraph} space-y-8`}>
       <div className="space-y-3 pt-10">
         <Heading type="h2">Our Recent Works</Heading>
         <P>
@@ -18,7 +22,7 @@ function Gallery() {
       <div>
         <GridImages />
       </div>
-    </section>
+    </motion.section>
   );
 }
 

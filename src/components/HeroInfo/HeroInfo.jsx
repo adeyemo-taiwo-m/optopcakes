@@ -6,12 +6,15 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Arrow from "../../ui/Arrow";
 import PrevArrow from "../../ui/PrevArrow";
+import Button from "../../ui/Button";
 
 import { paragraph } from "../../Utils/Paragragh";
 import { productData } from "../../assets/data";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import Button from "../../ui/Button";
 import { HiArrowSmallRight } from "react-icons/hi2";
+import { fadeUpSection } from "../../Utils/helpers";
+// eslint-disable-next-line
+import { motion } from "motion/react";
 
 function HeroInfo() {
   const settings = {
@@ -42,7 +45,8 @@ function HeroInfo() {
   };
 
   return (
-    <section
+    <motion.section
+      {...fadeUpSection()}
       className={`relative w-full mx-auto rounded-tl-[50px] rounded-tr-[50px] ${paragraph} py-14 bg-primary-light `}
     >
       <div className="space-y-3 pt-10">
@@ -74,7 +78,7 @@ function HeroInfo() {
         <Button icon={<HiArrowSmallRight />}>Order now</Button>
         <Button type="secondary">View more </Button>
       </div>
-    </section>
+    </motion.section>
   );
 }
 

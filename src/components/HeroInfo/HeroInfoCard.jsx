@@ -9,13 +9,13 @@ function HeroInfoCard({ title, children, price, imageName }) {
   const decrease = () => quantity > 1 && setQuantity(quantity - 1);
 
   return (
-    <div className="relative flex flex-col items-center">
+    <div className="relative flex group flex-col items-center">
       {/* Product Image */}
       {imageName && (
         <img
           src={imageName}
           alt={`Product ${title}`}
-          className="w-36 mb-[-4rem] object-contain transition-transform duration-300 hover:scale-110 z-10"
+          className="w-36 mb-[-4rem] object-contain transition-transform duration-300 group-hover:scale-110 z-10"
         />
       )}
 

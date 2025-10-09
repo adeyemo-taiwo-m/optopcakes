@@ -1,19 +1,35 @@
-import { useState } from "react";
+import { useContext } from "react";
 import Logo from "../../ui/Logo";
 import MobileNav from "./MobileNav";
 import NavButtons from "./NavButtons";
-import NavLinks from "../../ui/NavLinks";
+import NavLinks from "./NavLinks";
 import { paragraph } from "../../Utils/Paragragh";
+// eslint-disable-next-line
+import { easeIn, motion } from "motion/react";
+import { AppContext } from "../../contexts/AppContext";
 
 const NavBar = () => {
-  const [isOpenNav] = useState(false);
+  const { isOpenNav } = useContext(AppContext);
+
   return (
     <>
-      <div className={`flex justify-between items-center ${paragraph}`}>
+      <motion.div
+        initial={{ y: -100, opacity: 0 }}
+        animate={{
+          y: 0,
+          opacity: 1,
+          transition: {
+            duration: 0.5,
+            type: "spring",
+            ease: easeIn,
+          },
+        }}
+        className={`flex justify-between items-center ${paragraph}`}
+      >
         <Logo />
         <NavLinks />
         <NavButtons />
-      </div>
+      </motion.div>
       <>{isOpenNav && <MobileNav />}</>
     </>
   );

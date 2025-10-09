@@ -12,7 +12,7 @@ function GridImage({ imageName, variant = 0 }) {
     <img
       src={imageName}
       alt=""
-      className={`${spanClass} w-full h-full object-cover rounded-lg block`}
+      className={`${spanClass} hover:shadow-2xl hover:shadow-secondary-light/50 hover:border-2 hover:border-white w-full h-full object-cover rounded-lg block`}
       draggable="false"
     />
   );

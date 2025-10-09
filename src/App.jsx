@@ -1,15 +1,14 @@
-import NavBar from "./components/NavBar";
-import Hero from "./components/Hero";
-import HeroVector from "./ui/HeroVector";
-import HeroInfo from "./components/HeroInfo";
-import AboutUs from "./components/AboutUs";
-import OtherServices from "./components/OtherServices";
-import Gallery from "./components/Gallery";
-import Testimonials from "./components/Testimonials";
-import Booking from "./components/Booking";
-import FAQ from "./components/FAQ";
-import Footer from "./components/Footer";
-import MotionTest from "./ui/MotionTest";
+import NavBar from "./components/NavBar/NavBar";
+import Hero from "./components/Hero/Hero";
+import HeroVector from "./components/Hero/HeroVector";
+import HeroInfo from "./components/HeroInfo/HeroInfo";
+import AboutUs from "./components/About/AboutUs";
+import OtherServices from "./components/Services/OtherServices";
+import Gallery from "./components/Gallery/Gallery";
+import Testimonials from "./components/Testimonial/Testimonials";
+import Booking from "./components/Booking/Booking";
+import FAQ from "./components/FAQ Section/FAQ";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (

@@ -4,24 +4,33 @@ import {
   FaPhoneAlt,
   FaWhatsapp,
 } from "react-icons/fa";
-import { paragraph } from "../../Utils/Paragragh";
-import FooterLink from "./FooterLink";
-import { FaXTwitter } from "react-icons/fa6";
 import ContactLink from "./ContactLink";
+import FooterLink from "./FooterLink";
+import { paragraph } from "../../Utils/Paragragh";
+import { FaXTwitter } from "react-icons/fa6";
+// eslint-disable-next-line
+import { motion } from "motion/react";
+import { fadeUpSection } from "../../Utils/helpers";
+import { Link } from "react-scroll";
 
 function Footer() {
   return (
     <section
       className={`relative w-full text-white/90 mx-auto  ${paragraph} py-14 bg-secondary-default overflow-visible`}
     >
-      <div className="container mx-auto px-4 flex flex-col pt-10 mob:flex-col tab:flex-row lap:flex-row desk:flex-row gap-10 lap:items-center justify-between ">
+      <motion.div
+        {...fadeUpSection()}
+        className="container mx-auto px-4 flex flex-col pt-10 mob:flex-col  lap:flex-row desk:flex-row gap-10 lap:items-center justify-between "
+      >
         {/* Company Info */}
         <div className="flex-1">
-          <img
-            src="/logo-white.svg"
-            alt="Company Logo"
-            className="w-24 mb-4 cursor-pointer"
-          />
+          <Link to="hero">
+            <img
+              src="/logo-white.svg"
+              alt="Company Logo"
+              className="w-24 mb-4 cursor-pointer"
+            />
+          </Link>
           <p className="text-sm opacity-80 leading-relaxed max-w-9/10">
             We are dedicated to providing top-notch catering and event services
             nationwide, bringing delicious experiences right to your doorstep.
@@ -32,10 +41,10 @@ function Footer() {
         <div className="flex-1">
           <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
           <ul className="space-y-2 opacity-80 text-sm">
-            <FooterLink>Home</FooterLink>
-            <FooterLink> About Us</FooterLink>
-            <FooterLink>Services</FooterLink>
-            <FooterLink>Testimonials</FooterLink>
+            <FooterLink to="hero">Home</FooterLink>
+            <FooterLink to="about"> About Us</FooterLink>
+            <FooterLink to="services">Services</FooterLink>
+            <FooterLink to="testimonials">Testimonials</FooterLink>
           </ul>
         </div>
 
@@ -43,7 +52,7 @@ function Footer() {
         <div className="flex-1 ">
           <h3 className="text-lg font-semibold mb-3">Useful Links</h3>
           <ul className="space-y-2 opacity-80 text-sm">
-            <FooterLink>View Cart</FooterLink>
+            <FooterLink to="">View Cart</FooterLink>
             <FooterLink>Our Menu</FooterLink>
             <FooterLink>Book service</FooterLink>
             <FooterLink>Chat Us</FooterLink>
@@ -82,7 +91,7 @@ function Footer() {
             </ContactLink>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

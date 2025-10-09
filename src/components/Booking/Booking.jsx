@@ -4,6 +4,10 @@ import { FaWhatsapp } from "react-icons/fa";
 import Heading from "../../ui/Heading";
 import Input from "../../ui/Input";
 import Button from "../../ui/Button";
+import { fadeUpSection } from "../../Utils/helpers";
+
+// eslint-disable-next-line
+import { motion } from "motion/react";
 
 function Booking() {
   const inputFields = [
@@ -13,7 +17,10 @@ function Booking() {
     { placeholder: "Quantity Needed/No of Guests", type: "number" },
   ];
   return (
-    <section className={` ${paragraph} space-y-8 py-14 `}>
+    <motion.section
+      {...fadeUpSection()}
+      className={` ${paragraph} space-y-8 py-14 `}
+    >
       <div class="flex flex-col lap:flex-row items-center justify-between gap-8 p-6 bg-white rounded-2xl shadow-md">
         {/* <!-- Left: Image --> */}
         <div class="w-full lap:w-1/2">
@@ -55,7 +62,7 @@ function Booking() {
           </form>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 

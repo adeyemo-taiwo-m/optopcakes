@@ -82,6 +82,10 @@ body {
   justify-content: center;
 }
 
+.slick-slide {
+  width: 100%;
+}
+
 .slick-prev,
 .slick-next {
   width: 40px;
@@ -98,6 +102,34 @@ body {
 .slick-prev:hover,
 .slick-next:hover {
   background-color: #1e40af; /* darker blue */
+}
+
+/* Link */
+
+.link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.link:hover {
+  color: var(--color-primary-default);
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 0; /* Start with no width */
+  height: 0.15rem;
+  background-color: var(--color-primary-default);
+  transition: width 0.3s ease; /* Smooth animation */
+}
+
+.link:hover::after {
+  width: 100%; /* Expand fully on hover */
 }
 
 /* Carousel */
@@ -243,4 +275,37 @@ body {
 .no-scrollbar {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+}
+
+/* Ovrelay */
+/* overlay.css */
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(231, 173, 196, 0.35);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 1000;
+  pointer-events: auto;
+  transition: opacity 180ms ease;
+  opacity: 1;
+}
+
+/* hidden state for transitions */
+.overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* modal box placed on overlay */
+.overlay .modal {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.25rem;
+  max-width: 720px;
+  width: calc(100% - 2rem);
+  box-shadow: 0 10px 30px rgba(2, 8, 23, 0.35);
+  z-index: 1010; /* above overlay content */
 }

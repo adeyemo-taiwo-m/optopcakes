@@ -1,14 +1,15 @@
 import React from "react";
+import { Link } from "react-scroll";
 
 function FooterLink({ to = "#", children }) {
   return (
     <li>
-      <a
-        href={to}
+      <Link
+        to={to}
         className="hover:text-primary-hover opacity-100 cursor-pointer "
       >
         {children}
-      </a>
+      </Link>
     </li>
   );
 }

@@ -1,4 +1,6 @@
-import React from "react";
+import React, { cloneElement } from "react";
+// eslint-disable-next-line
+import { motion } from "motion/react";
 
 function Button({ onClick, children, type = "primary", icon, className }) {
   const styles = {
@@ -15,12 +17,18 @@ function Button({ onClick, children, type = "primary", icon, className }) {
       "rounded-sm border justify-center  hover:bg-whatsapp border-whatsapp  flex gap-2 px-4 py-3 text-whatsapp  hover:text-white  items-center",
   };
   return (
-    <button
+    <motion.button
+      whileTap={{ y: 10 }}
+      transition={{ duration: 0.1 }}
       onClick={onClick}
-      className={`${styles[type]} ${className} cursor-pointer`}
+      className={`${styles[type]} ${className} cursor-pointer group transition-all duration-300 `}
     >
-      {children} {icon}
-    </button>
+      {children}{" "}
+      {cloneElement(<span>{icon}</span>, {
+        className:
+          "transition-transform duration-300 group-hover:translate-x-2 group-hover:-rotate-45",
+      })}
+    </motion.button>
   );
 }
 

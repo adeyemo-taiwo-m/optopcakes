@@ -86,58 +86,90 @@ export const TESTIMONIALS = [
   },
   {
     review:
-      "This cake is as sweet and beautiful as you. You truly bake with love, they are professional and very well-crafted",
-    name: "",
-    location: "",
-    rating: "",
+      "Getting you to be our baker for the day is one of the best thing ever for that day, I dreamt of a castle cake for my wedding and just discussing on the phone, you did exactly. That cake is the best so far",
+    name: "Alice",
+    location: "Lagos",
     img: "/testimonial-image-2.png",
   },
   {
     review:
       "The small chops were the highlight of my birthday. Everyone kept asking where I ordered from! 😁",
-    name: "",
-    location: "",
-    rating: "",
+    name: "Aduke",
+    location: "Ekiti",
     img: "/testimonial-image-3.png",
   },
   {
     review:
-      "My wedding cake was exactly what I dreamed of,  beautiful design and so delicious. Thank you!",
-    name: "",
-    location: "",
-    rating: "",
+      "You’re more than a boss to me — you’re a mother, a mentor, and a blessing. Your kindness, support, and the way you care deeply touches my heart. I don’t take it for granted",
+    name: "Ajoke",
+    location: "Ibadan",
+
     img: "/testimonial-image-4.png",
   },
   {
     review:
       "I ordered a tray of small chops for a family get-together. Delivery was fast and everything tasted amazing",
-    name: "",
-    location: "",
+    name: "Kelvin",
+    location: "Oshogbo",
     rating: "",
     img: "/testimonial-image-5.png",
   },
   {
     review:
       "They catered for my dad’s 60th and the food was plenty, fresh, and served on time. No stress at all.",
-    name: "",
-    location: "",
-    rating: "",
+    name: "Kenny",
+    location: "Ife",
+
     img: "/testimonial-image-6.png",
   },
   {
     review:
       "The decoration changed the whole look of our venue. It was elegant and picture-perfect , Thank you😍",
-    name: "",
-    location: "",
-    rating: "",
+    name: "Adewale",
+    location: "Oyo State",
+
     img: "/testimonial-image-7.png",
   },
   {
     review:
       "Our traditional engagement setup was stunning. From the food to the bride’s gifts, everything was handled perfectly",
-    name: "",
-    location: "",
-    rating: "",
+    name: "Muhammed",
+    location: "Ibadan",
+
     img: "/testimonial-image-8.png",
+  },
+];
+
+export const faqs = [
+  {
+    question: "How can I place an order?",
+    answer:
+      "You can place an order by filling out our booking form or contacting us via WhatsApp for direct assistance.",
+  },
+  {
+    question: "Do you offer nationwide delivery?",
+    answer:
+      "Yes, we deliver nationwide. Delivery time may vary depending on your location.",
+  },
+  {
+    question: "How do I place an order for small chops or cakes??",
+    answer:
+      "Yes, as long as your order hasn’t been processed, you can modify it by reaching out to our support team.",
+  },
+  {
+    question: "Can I modify my order after placing it?",
+    answer:
+      "Yes, as long as your order hasn’t been processed, you can modify it by reaching out to our support team.",
+  },
+  {
+    question: "What is the minimum order for trays or party packs??",
+    answer:
+      "Yes, as long as your order hasn’t been processed, you can modify it by reaching out to our support team.",
+  },
+  {
+    question:
+      "How far in advance should I book catering or engagement services?",
+    answer:
+      "Yes, as long as your order hasn’t been processed, you can modify it by reaching out to our support team.",
   },
 ];

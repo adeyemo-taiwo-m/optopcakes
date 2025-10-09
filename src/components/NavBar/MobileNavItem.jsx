@@ -1,10 +1,13 @@
 import React from "react";
+import { Link } from "react-scroll";
 
-function MobileNavItem({ children, to = "#" }) {
+function MobileNavItem({ children, to = "#", navRef }) {
   return (
-    <li className="hover:text-primary-active text-xl w-full hover:bg-primary-light duration-300  transition-colors text-white  px-4 py-3 rounded-sm mb-4 border-b border-primary-light/20 ">
-      <a href={to}>{children}</a>
-    </li>
+    <Link ref={navRef} to={to} className="w-full">
+      <li className="hover:text-primary-active text-xl w-full hover:bg-primary-light duration-300  transition-colors text-white  px-4 py-3 rounded-sm  border-b border-primary-light/20 ">
+        {children}
+      </li>
+    </Link>
   );
 }
 
