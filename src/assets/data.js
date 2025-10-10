@@ -1,46 +1,30 @@
 export const productData = [
   {
-    title: "Samosa",
-    price: "300",
+    title: "Small Chops with Meat",
+    price: "1800",
     description:
-      "Crispy golden rolls filled with a tasty mix of vegetables and spices, perfect for light snacking",
+      "This package contains 1 Samosa, 2 Springroll. 4 Puffpuff, 1 Stick Meat",
     imageName: "/product-image-1.png",
   },
   {
-    title: "Sausage Roll",
-    price: "800",
+    title: "Small Chops with Gizzard",
+    price: "1900",
     description:
-      "Flaky pastry wrapped around a juicy, seasoned sausage, baked to perfection for a hearty treat.",
-    imageName: "/product-image-4.png",
-  },
-  {
-    title: "Spring Rolls",
-    price: "300",
-    description:
-      "Soft, fluffy, and slightly sweet fried dough balls, a crowd favorite at any event.",
+      " This package contains 1 Samosa 1 Spring roll 4 Puffpuff 1 Gizzard.",
     imageName: "/product-image-2.png",
   },
   {
-    title: "Puff Puff",
-    price: "100",
+    title: "Small Chops with Chicken",
+    price: "2200",
     description:
-      "Soft, fluffy, and slightly sweet fried dough balls, a crowd favorite at any event.",
+      "This package contains 1 Samosa 1 Spring roll 4 Puffpuff 1 Chicken.",
     imageName: "/product-image-3.png",
   },
   {
-    title: "Sausage Roll",
-    price: "800",
-    description:
-      "Flaky pastry wrapped around a juicy, seasoned sausage, baked to perfection for a hearty treat.",
+    title: "Chin Chin (1 paint)",
+    price: "22000",
+    description: "Crispy, golden-brown Chin Chin with a rich, buttery flavor.",
     imageName: "/product-image-4.png",
-  },
-
-  {
-    title: "Spring Rolls",
-    price: "300",
-    description:
-      "Soft, fluffy, and slightly sweet fried dough balls, a crowd favorite at any event.",
-    imageName: "/product-image-2.png",
   },
 ];
 
