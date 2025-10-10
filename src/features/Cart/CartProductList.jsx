@@ -54,9 +54,9 @@ function CartProductList() {
                 </React.Fragment>
               ))}
             </div>
+            <Button className={"w-full "}>Order now</Button>
           </div>
         )}
-        <Button className={"w-full "}>Order now</Button>
       </div>
     </Element>
   );

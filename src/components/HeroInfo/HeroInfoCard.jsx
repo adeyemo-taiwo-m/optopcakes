@@ -1,26 +1,39 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Heading from "../../ui/Heading";
 import Button from "../../ui/Button";
 import { formatCurrency } from "../../Utils/helpers";
 // eslint-disable-next-line
 import { motion } from "motion/react";
-import ConfirmAddToCart from "../../features/ConfirmAddToCart";
+import ConfirmAddToCart from "../../ui/ConfirmAddToCart";
+import ConfirmDelete from "../../ui/ConfirmDelete";
+import { AppContext } from "../../contexts/AppContext";
 
-function HeroInfoCard({ title, children, price, imageName, onAddToCart }) {
+function HeroInfoCard({
+  title,
+  children,
+  price,
+  imageName,
+  onAddToCart,
+  onDelete,
+}) {
   const [quantity, setQuantity] = useState(1);
-  const [showConfirm, setShowConfirm] = useState(false);
+
   const numericPrice = Number(price);
+
+  const newProduct = {
+    title,
+    price: numericPrice,
+    quantity,
+    totalPrice: price * quantity,
+  };
+  const [showConfirm, setShowConfirm] = useState(false);
+  const [confirmDeleted, setConfirmDeleted] = useState(false);
+  const { cart } = useContext(AppContext);
   const increase = () => setQuantity(quantity + 1);
   const decrease = () => quantity > 1 && setQuantity(quantity - 1);
-
+  const isInCart = cart.some((item) => item.title === newProduct.title);
   function addProduct() {
     const toggleConfirm = () => setShowConfirm(!showConfirm);
-    const newProduct = {
-      title,
-      price: numericPrice,
-      quantity,
-      totalPrice: price * quantity,
-    };
     onAddToCart(newProduct);
     setQuantity(1);
 
@@ -29,6 +42,16 @@ function HeroInfoCard({ title, children, price, imageName, onAddToCart }) {
     // Hide after 2 seconds
     setTimeout(() => {
       setShowConfirm(false);
+    }, 1500);
+  }
+
+  function deleteProduct() {
+    onDelete(newProduct);
+    // Show Confirmation
+    setConfirmDeleted(true);
+    // Hide after 2 seconds
+    setTimeout(() => {
+      setConfirmDeleted(false);
     }, 1500);
   }
 
@@ -78,11 +101,18 @@ function HeroInfoCard({ title, children, price, imageName, onAddToCart }) {
           </div>
 
           {/* Add to Cart Button */}
-
-          <Button type="tertiary" onClick={addProduct}>
-            Add to Cart
-          </Button>
+          <div className="flex gap-2">
+            <Button type="tertiary" onClick={addProduct}>
+              Add to Cart
+            </Button>
+            {isInCart && (
+              <Button onClick={deleteProduct} type="delete">
+                Delete
+              </Button>
+            )}
+          </div>
           {showConfirm && <ConfirmAddToCart />}
+          {confirmDeleted && <ConfirmDelete />}
         </div>
       </div>
     </div>

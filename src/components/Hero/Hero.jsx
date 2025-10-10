@@ -15,7 +15,7 @@ function Hero() {
     >
       <Element
         name="hero"
-        className="pb-4 lap:justify-center  flex w-4/5 flex-col lap:text-left  mx-auto lap:mx-0 gap-4 tab:gap-6 lap:w-1/2"
+        className="pb-4 lap:justify-center  flex w-4/5 flex-col lap:text-left  mx-auto lap:mx-0 gap-4 tab:gap-6 lap:w-4/5 "
       >
         <div className="space-y-3">
           <Heading>
@@ -28,7 +28,7 @@ function Hero() {
             variants={fadeUp(0.5)}
             initial="initial"
             animate="animate"
-            className="  lap:text-left text-center text-sm tab:text-base !tab:mx-auto lap:mx-0"
+            className="  lap:text-left text-center text-sm tab:text-base lap:w-3/4 !tab:mx-auto lap:mx-0"
           >
             Perfectly prepared finger foods delivered to your event, ensuring
             every guest enjoys a tasteful and hassle-free experience

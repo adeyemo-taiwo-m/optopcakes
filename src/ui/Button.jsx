@@ -15,6 +15,8 @@ function Button({ onClick, children, type = "primary", icon, className }) {
       "w-8 h-8 flex items-center flex items-center justify-center rounded-md bg-primary-default text-white text-xl",
     whatsapp:
       "rounded-sm border justify-center  hover:bg-whatsapp border-whatsapp  flex gap-2 px-4 py-3 text-whatsapp  hover:text-white  items-center",
+    delete:
+      "rounded-sm bg-secondary-default hover:bg-secondary-hover justify-center items-center flex gap-2 px-4 py-3 text-white",
   };
   return (
     <motion.button
