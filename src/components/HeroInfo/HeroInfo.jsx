@@ -15,12 +15,50 @@ import { HiArrowSmallRight } from "react-icons/hi2";
 import { fadeUpSection } from "../../Utils/helpers";
 // eslint-disable-next-line
 import { motion } from "motion/react";
+import { useContext } from "react";
+import { AppContext } from "../../contexts/AppContext";
+import { scroller } from "react-scroll";
 
 function HeroInfo() {
+  const { setCart, setIsOpenCart } = useContext(AppContext) || [];
+
+  function handleAddToCart(product) {
+    setCart((prevCart) => {
+      const existingProduct = prevCart.find(
+        (item) => item.title === product.title
+      );
+
+      if (existingProduct) {
+        return prevCart.map((item) =>
+          item.title === product.title
+            ? {
+                ...item,
+                quantity: item.quantity + product.quantity,
+                totalPrice:
+                  (item.quantity + product.quantity) * Number(item.price),
+              }
+            : item
+        );
+      }
+
+      return [...prevCart, { ...product, price: Number(product.price) }];
+    });
+  }
+
+  function handleViewToCart() {
+    scroller.scrollTo("nav", {
+      smooth: true,
+      duration: 600,
+      offset: 0,
+    });
+
+    setIsOpenCart((isOpenCart) => !isOpenCart);
+  }
+
   const settings = {
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 1,
     slidesToScroll: 1,
     prevArrow: <PrevArrow icon={<FaArrowLeft />} style={"left-0"} />,
     nextArrow: <Arrow icon={<FaArrowRight />} style={"right-0"} />,
@@ -35,7 +73,7 @@ function HeroInfo() {
       },
       {
         breakpoint: 768,
-        settings: { slidesToShow: 1, slidesToScroll: 1 },
+        settings: { slidesToShow: 2, slidesToScroll: 1 },
       },
       {
         breakpoint: 640,
@@ -66,6 +104,7 @@ function HeroInfo() {
                 imageName={data.imageName}
                 title={data.title}
                 price={data.price}
+                onAddToCart={handleAddToCart}
               >
                 {data.description}
               </HeroInfoCard>
@@ -75,8 +114,10 @@ function HeroInfo() {
       </div>
 
       <div className="text-center mt-10 flex justify-center items-center gap-2.5">
-        <Button icon={<HiArrowSmallRight />}>Order now</Button>
-        <Button type="secondary">View more </Button>
+        <Button icon={<HiArrowSmallRight />} onClick={handleViewToCart}>
+          View cart
+        </Button>
+        <Button type="secondary">View menu </Button>
       </div>
     </motion.section>
   );

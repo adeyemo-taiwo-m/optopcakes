@@ -3,6 +3,7 @@ import Button from "../../ui/Button";
 import { fadeUp } from "../../Utils/helpers";
 // eslint-disable-next-line
 import { motion } from "motion/react";
+import { scroller } from "react-scroll";
 function HeroButtons() {
   return (
     <motion.div
@@ -11,7 +12,18 @@ function HeroButtons() {
       animate="animate"
       className="flex flex-col w-full  lap:flex-row gap-3 mx-auto  lap:mx-0 "
     >
-      <Button icon={<HiArrowSmallRight />}>Order now</Button>
+      <Button
+        onClick={() =>
+          scroller.scrollTo("booking", {
+            smooth: true,
+            duration: 600,
+            offset: -80,
+          })
+        }
+        icon={<HiArrowSmallRight />}
+      >
+        Book now
+      </Button>
       <Button type="secondary">View menu</Button>
     </motion.div>
   );

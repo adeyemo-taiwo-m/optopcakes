@@ -9,7 +9,7 @@ function TestimonialItems({ xArray }) {
       <motion.div
         animate={{ x: xArray }}
         transition={{ repeat: Infinity, duration: 15, ease: "linear" }}
-        className="flex gap-4 w-full  no-scrollbar"
+        className="flex gap-4 w-full cursor-pointer  no-scrollbar"
       >
         {TESTIMONIALS.map((data, i) => (
           <TestimonialItem data={data} key={i} />

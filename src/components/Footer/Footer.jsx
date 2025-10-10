@@ -1,7 +1,9 @@
 import {
   FaFacebookF,
+  FaInstagram,
   FaMapMarkerAlt,
   FaPhoneAlt,
+  FaSnapchat,
   FaWhatsapp,
 } from "react-icons/fa";
 import ContactLink from "./ContactLink";
@@ -54,8 +56,14 @@ function Footer() {
           <ul className="space-y-2 opacity-80 text-sm">
             <FooterLink to="">View Cart</FooterLink>
             <FooterLink>Our Menu</FooterLink>
-            <FooterLink>Book service</FooterLink>
-            <FooterLink>Chat Us</FooterLink>
+            <FooterLink to="booking">Book service</FooterLink>
+            <FooterLink
+              to={
+                "https://www.snapchat.com/add/optopcakes?share_id=HP1K6Q2b168&locale=en-GB"
+              }
+            >
+              Chat Us
+            </FooterLink>
           </ul>
         </div>
 
@@ -66,7 +74,9 @@ function Footer() {
             <h3 className="text-lg font-semibold mb-3">Get in Touch</h3>
             <div className="flex items-center gap-3 mb-3 ">
               <FaPhoneAlt className="text-xl text-primary-light" />
-              <p className="text-xl opacity-80">+234 803 282 2302</p>
+              <a href="tel:+2348032822302" className="text-xl opacity-80">
+                +234 803 282 2302
+              </a>
             </div>
             <div className="flex items-center  gap-3">
               <FaMapMarkerAlt className="text-xl text-primary-light" />
@@ -78,15 +88,27 @@ function Footer() {
           </div>
           {/* Refature the links */}
           <div className="flex items-center  gap-4 text-2xl">
-            <ContactLink>
+            <ContactLink to={"https://www.facebook.com/optopcakes"}>
               <FaFacebookF />
             </ContactLink>
 
-            <ContactLink>
+            <ContactLink to={"https://wa.me/08032822302"}>
               <FaWhatsapp />
             </ContactLink>
 
-            <ContactLink>
+            <ContactLink
+              to={"https://www.instagram.com/optopcakes?igsh=cmU1Z2V6aHk4aGUy"}
+            >
+              <FaInstagram />
+            </ContactLink>
+            <ContactLink
+              to={
+                "https://www.snapchat.com/add/optopcakes?share_id=HP1K6Q2b168&locale=en-GB"
+              }
+            >
+              <FaSnapchat />
+            </ContactLink>
+            <ContactLink to={"https://x.com/optopcakes?s=21"}>
               <FaXTwitter />
             </ContactLink>
           </div>

@@ -29,7 +29,6 @@ function MobileNav() {
         >
           <div className="w-full" ref={excludeRef}>
             <span className="align-right flex justify-end  p-2  ">
-              {" "}
               <HiX
                 onClick={() => setIsOpenNav((isOpen) => !isOpen)}
                 className="text-2xl cursor-pointer rounded-2xl  text-white "

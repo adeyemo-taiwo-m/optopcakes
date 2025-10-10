@@ -6,6 +6,7 @@ import { paragraph } from "../../Utils/Paragragh";
 import { fadeUp } from "../../Utils/helpers";
 // eslint-disable-next-line
 import { motion } from "motion/react";
+import P from "../../ui/P";
 
 function Hero() {
   return (
@@ -23,15 +24,15 @@ function Hero() {
             <span className="text-primary-default">Small Chops for</span> Every
             Occasion
           </Heading>
-          <motion.p
+          <motion.P
             variants={fadeUp(0.5)}
             initial="initial"
             animate="animate"
-            className="text-center tab:w-4/5  lap:text-left tab:mx-auto lap:mx-0"
+            className="  lap:text-left text-center text-sm tab:text-base !tab:mx-auto lap:mx-0"
           >
             Perfectly prepared finger foods delivered to your event, ensuring
             every guest enjoys a tasteful and hassle-free experience
-          </motion.p>
+          </motion.P>
         </div>
         <HeroButtons />
       </Element>

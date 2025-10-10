@@ -1,35 +1,35 @@
 export const productData = [
   {
     title: "Samosa",
-    price: "#200",
+    price: "200",
     description:
       "Crispy golden rolls filled with a tasty mix of vegetables and spices, perfect for light snacking",
     imageName: "/product-image-1.png",
   },
   {
     title: "Sausage Roll",
-    price: "#200",
+    price: "200",
     description:
       "Flaky pastry wrapped around a juicy, seasoned sausage, baked to perfection for a hearty treat.",
     imageName: "/product-image-4.png",
   },
   {
     title: "Spring Rolls",
-    price: "#200",
+    price: "200",
     description:
       "Soft, fluffy, and slightly sweet fried dough balls, a crowd favorite at any event.",
     imageName: "/product-image-2.png",
   },
   {
     title: "Puff Puff",
-    price: "#200",
+    price: "200",
     description:
       "Soft, fluffy, and slightly sweet fried dough balls, a crowd favorite at any event.",
     imageName: "/product-image-3.png",
   },
   {
     title: "Sausage Roll",
-    price: "#200",
+    price: "200",
     description:
       "Flaky pastry wrapped around a juicy, seasoned sausage, baked to perfection for a hearty treat.",
     imageName: "/product-image-4.png",
@@ -37,7 +37,7 @@ export const productData = [
 
   {
     title: "Spring Rolls",
-    price: "#200",
+    price: "200",
     description:
       "Soft, fluffy, and slightly sweet fried dough balls, a crowd favorite at any event.",
     imageName: "/product-image-2.png",
@@ -153,23 +153,21 @@ export const faqs = [
   },
   {
     question: "How do I place an order for small chops or cakes??",
-    answer:
-      "Yes, as long as your order hasn’t been processed, you can modify it by reaching out to our support team.",
+    answer: "Via any of our social media platform messages or a direct call.",
   },
   {
     question: "Can I modify my order after placing it?",
     answer:
-      "Yes, as long as your order hasn’t been processed, you can modify it by reaching out to our support team.",
+      "Yes, as long as your order hasn’t been processed, you can modify it by reaching out to us with no refund.",
   },
   {
     question: "What is the minimum order for trays or party packs??",
     answer:
-      "Yes, as long as your order hasn’t been processed, you can modify it by reaching out to our support team.",
+      "For small chops we do Indoor at 5 plates and above, Outdoor we do 250 plates and above, ",
   },
   {
     question:
       "How far in advance should I book catering or engagement services?",
-    answer:
-      "Yes, as long as your order hasn’t been processed, you can modify it by reaching out to our support team.",
+    answer: "In the space of 1-2 weeks at least.",
   },
 ];
