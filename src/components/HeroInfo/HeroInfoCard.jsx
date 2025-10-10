@@ -58,7 +58,7 @@ function HeroInfoCard({
   return (
     <div className="relative flex group tab:min-w-4/5 flex-col items-center">
       {/* Card */}
-      <div className="bg-white w-3/5 tab:w-3/5 rounded-lg shadow-md overflow-hidden relative z-0">
+      <div className="bg-white w-4/5 tab:w-3/5 mt-10 rounded-lg shadow-md overflow-hidden relative z-0">
         {/* Image section (top 40%) */}
         <div className="relative h-40 w-full">
           {imageName && (
@@ -86,7 +86,7 @@ function HeroInfoCard({
           <div className="mt-auto">
             <div className="flex items-center justify-between mb-3">
               {/* Quantity Buttons */}
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-1 ">
                 <Button onClick={decrease} type="quantity">
                   –
                 </Button>
