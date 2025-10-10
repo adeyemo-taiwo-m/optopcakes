@@ -17,7 +17,7 @@ function Testimonials() {
       >
         <div className="space-y-10 lap:space-y-16 pt-10">
           <div className="space-y-3">
-            <Heading type="h2">Hear what out clients say</Heading>
+            <Heading type="h2">Hear what our clients say</Heading>
             <P>
               Hear from our happy clients, real stories, star ratings, and
               experiences that showcase the quality and care we bring to every

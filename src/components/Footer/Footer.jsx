@@ -97,10 +97,9 @@ function Footer() {
               <FaFacebookF />
             </ContactLink>
 
-            <ContactLink to={"https://wa.me/08032822302"}>
+            <ContactLink to={"https://wa.me/2348032822302"}>
               <FaWhatsapp />
             </ContactLink>
-
             <ContactLink
               to={"https://www.instagram.com/optopcakes?igsh=cmU1Z2V6aHk4aGUy"}
             >
