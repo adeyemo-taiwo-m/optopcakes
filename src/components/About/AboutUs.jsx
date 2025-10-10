@@ -29,7 +29,7 @@ function AboutUs() {
               event planning and anchoring
             </P>
             <div className="w-full flex flex-col-reverse tab:flex-row lap:justify-start gap-4  justify-center items-center">
-              <a href="https://wa.me/08032822302">
+              <a href="https://wa.me/2348032822302">
                 <Button type="primary" className="mt-4   ">
                   Contact us
                 </Button>
