@@ -21,7 +21,7 @@ export const fadeUpSection = () => {
     whileInView: {
       y: 0,
       opacity: 1,
-      transition: { duration: 1, ease: "easeIn" },
+      transition: { duration: 0.5, ease: "easeIn" },
     },
 
     viewport: { amount: 0.3, once: false },

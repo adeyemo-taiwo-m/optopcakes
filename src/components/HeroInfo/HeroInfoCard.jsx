@@ -1,15 +1,20 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Heading from "../../ui/Heading";
 import Button from "../../ui/Button";
 import { formatCurrency } from "../../Utils/helpers";
+// eslint-disable-next-line
+import { motion } from "motion/react";
+import ConfirmAddToCart from "../../features/ConfirmAddToCart";
 
 function HeroInfoCard({ title, children, price, imageName, onAddToCart }) {
   const [quantity, setQuantity] = useState(1);
+  const [showConfirm, setShowConfirm] = useState(false);
   const numericPrice = Number(price);
   const increase = () => setQuantity(quantity + 1);
   const decrease = () => quantity > 1 && setQuantity(quantity - 1);
 
   function addProduct() {
+    const toggleConfirm = () => setShowConfirm(!showConfirm);
     const newProduct = {
       title,
       price: numericPrice,
@@ -18,6 +23,13 @@ function HeroInfoCard({ title, children, price, imageName, onAddToCart }) {
     };
     onAddToCart(newProduct);
     setQuantity(1);
+
+    // Show Confirmation
+    toggleConfirm();
+    // Hide after 2 seconds
+    setTimeout(() => {
+      setShowConfirm(false);
+    }, 1500);
   }
 
   return (
@@ -66,9 +78,11 @@ function HeroInfoCard({ title, children, price, imageName, onAddToCart }) {
           </div>
 
           {/* Add to Cart Button */}
+
           <Button type="tertiary" onClick={addProduct}>
             Add to Cart
           </Button>
+          {showConfirm && <ConfirmAddToCart />}
         </div>
       </div>
     </div>
