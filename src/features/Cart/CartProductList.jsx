@@ -27,7 +27,7 @@ function CartProductList() {
     );
 
     const itemsDetails = orderDetails.join("\n");
-    const message = `${itemsDetails}\nTotal Order is ${totalPrice}`;
+    const message = ` Hi Optops, an order from your website\n ${itemsDetails}\nTotal Order is ${totalPrice}`;
     const encodedMessage = encodeURIComponent(message);
     const whatsappNumber = "2348032822302";
     // Send to whatsapp
