@@ -12,9 +12,9 @@ function CartProductList() {
   function handleOrder() {
     const orderDetails = cart.map((item, i) => {
       const title = item.title;
-      const price = item.price;
+      const price = formatCurrency(item.price);
       const quantity = item.quantity;
-      const total = item.totalPrice;
+      const total = formatCurrency(item.totalPrice);
 
       const items = ` Item ${
         i + 1
@@ -22,7 +22,9 @@ function CartProductList() {
 
       return items;
     });
-    const totalPrice = cart.reduce((total, item) => total + item.totalPrice, 0);
+    const totalPrice = formatCurrency(
+      cart.reduce((total, item) => total + item.totalPrice, 0)
+    );
 
     const itemsDetails = orderDetails.join("\n");
     const message = `${itemsDetails}\nTotal Order is ${totalPrice}`;
