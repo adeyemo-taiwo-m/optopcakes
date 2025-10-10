@@ -24,7 +24,18 @@ function HeroButtons() {
       >
         Book now
       </Button>
-      <Button type="secondary">View menu</Button>
+      <Button
+        type="secondary"
+        onClick={() => {
+          scroller.scrollTo("services", {
+            smooth: true,
+            duration: 600,
+            offset: 0,
+          });
+        }}
+      >
+        View menu
+      </Button>
     </motion.div>
   );
 }

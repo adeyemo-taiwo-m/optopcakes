@@ -1,8 +1,11 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useContext } from "react";
 //eslint-disable-next-line
 import { motion, useMotionValue, useTransform } from "motion/react";
 import Button from "../../ui/Button";
 import { SERVICES_ITEMS } from "../../assets/data";
+import { AppContext } from "../../contexts/AppContext";
+import OtherServiceDetails from "./OtherServiceDetails";
+import { createPortal } from "react-dom";
 
 const DRAG_BUFFER = 0;
 const VELOCITY_THRESHOLD = 500;
@@ -106,7 +109,14 @@ export default function Carousel({
           right: 0,
         },
       };
-
+  const {
+    openServiceModal,
+    setOpenServiceModal,
+    selectedServiceData,
+    setSelectedServiceData,
+    serviceName,
+    setServiceName,
+  } = useContext(AppContext);
   return (
     <div
       ref={containerRef}
@@ -172,13 +182,31 @@ export default function Carousel({
                       {item.description}
                     </p>
                   </div>
-                  <Button>Learn more</Button>
+                  <Button
+                    onClick={() => {
+                      setSelectedServiceData(item.data);
+                      setServiceName(item.title);
+                      setOpenServiceModal((open) => !open);
+                    }}
+                  >
+                    View menu
+                  </Button>
                 </div>
               </div>
+              {openServiceModal &&
+                createPortal(
+                  <OtherServiceDetails
+                    key={item.id}
+                    title={serviceName}
+                    serviceData={selectedServiceData}
+                  />,
+                  document.body
+                )}
             </motion.div>
           );
         })}
       </motion.div>
+
       <div className={`carousel-indicators-container ${round ? "round" : ""}`}>
         <div className="carousel-indicators">
           {items.map((_, index) => (

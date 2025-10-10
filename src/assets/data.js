@@ -35,6 +35,17 @@ export const SERVICES_ITEMS = [
     description: "Custom cakes for birthdays, weddings, and events.",
     id: 1,
     img: "/service-img-1.png",
+    data: [
+      { name: "Birthday cakes for kids", price: 50000 },
+      { name: "Character cakes", price: 65000 },
+      { name: "Birthday cakes for adults", price: 100000 },
+      { name: "Mouldling cakes", price: 150000 },
+      { name: "Gravity defying", price: 20000 },
+      { name: "Birthday cakes for adults", price: 150000 },
+      { name: "Wedding cake", price: 200000 },
+      { name: "Traditional cake", price: 200000 },
+      { name: "Castle cakes", price: 1200000 },
+    ],
   },
   {
     title: "Decoration",
@@ -42,12 +53,22 @@ export const SERVICES_ITEMS = [
       "Event decoration for weddings, birthdays, engagements, Lying in state.",
     id: 2,
     img: "/service-img-3.png",
+    data: [
+      { name: "Macro Decor(only stage)", price: 120000 },
+      { name: "Exclusive decor (full hall settings) ", price: 550000 },
+      { name: "Truss", price: 1000000 },
+    ],
   },
   {
     title: "Catering",
     description: "Full catering for events (main meals, drinks, desserts).",
     id: 3,
     img: "/service-img-4.png",
+    data: [
+      { name: "Catering (1 cow)", price: 200000 },
+      { name: "Catering (2 sides)", price: 50000 },
+      { name: "Amala @ The Spot", price: 60000 },
+    ],
   },
 
   {
@@ -55,6 +76,11 @@ export const SERVICES_ITEMS = [
     description: "Traditional engagement setup",
     id: 4,
     img: "/service-img-2.png",
+    data: [
+      { name: "Booking (both sides)", price: 80000 },
+      { name: "Booking (one sides)", price: 50000 },
+      { name: "Drummers", price: 20000 },
+    ],
   },
 ];
 

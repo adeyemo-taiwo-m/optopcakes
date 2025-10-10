@@ -6,6 +6,9 @@ const AppContext = createContext();
 export function AppProvider({ children }) {
   const [isOpenNav, setIsOpenNav] = useState(false);
   const [isOpenCart, setIsOpenCart] = useState(false);
+  const [openServiceModal, setOpenServiceModal] = useState();
+  const [selectedServiceData, setSelectedServiceData] = useState(null);
+  const [serviceName, setServiceName] = useState("");
   const [theme, setTheme] = useState("light");
   const [cart, setCart] = useState(() => {
     const savedCart = localStorage.getItem("cart");
@@ -26,7 +29,7 @@ export function AppProvider({ children }) {
 
     setIsOpenCart((isOpenCart) => !isOpenCart);
   }
-
+  console.log(openServiceModal);
   return (
     <AppContext.Provider
       value={{
@@ -38,7 +41,13 @@ export function AppProvider({ children }) {
         setCart,
         isOpenCart,
         setIsOpenCart,
+        serviceName,
+        setServiceName,
         handleViewToCart,
+        openServiceModal,
+        setOpenServiceModal,
+        selectedServiceData,
+        setSelectedServiceData,
       }}
     >
       {children}

@@ -17,6 +17,7 @@ import { fadeUpSection } from "../../Utils/helpers";
 import { motion } from "motion/react";
 import { useContext } from "react";
 import { AppContext } from "../../contexts/AppContext";
+import { scroller } from "react-scroll";
 
 function HeroInfo() {
   const { setCart, handleViewToCart } = useContext(AppContext) || [];
@@ -113,7 +114,18 @@ function HeroInfo() {
         <Button icon={<HiArrowSmallRight />} onClick={handleViewToCart}>
           View cart
         </Button>
-        <Button type="secondary">View menu </Button>
+        <Button
+          type="secondary"
+          onClick={() => {
+            scroller.scrollTo("services", {
+              smooth: true,
+              duration: 600,
+              offset: 0,
+            });
+          }}
+        >
+          View menu{" "}
+        </Button>
       </div>
     </motion.section>
   );
