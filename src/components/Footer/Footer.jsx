@@ -14,8 +14,11 @@ import { FaXTwitter } from "react-icons/fa6";
 import { motion } from "motion/react";
 import { fadeUpSection } from "../../Utils/helpers";
 import { Link } from "react-scroll";
+import { useContext } from "react";
+import { AppContext } from "../../contexts/AppContext";
 
 function Footer() {
+  const { handleViewToCart } = useContext(AppContext);
   return (
     <section
       className={`relative w-full text-white/90 mx-auto  ${paragraph} py-14 bg-secondary-default overflow-visible`}
@@ -54,7 +57,9 @@ function Footer() {
         <div className="flex-1 ">
           <h3 className="text-lg font-semibold mb-3">Useful Links</h3>
           <ul className="space-y-2 opacity-80 text-sm">
-            <FooterLink to="">View Cart</FooterLink>
+            <p className="hover:text-primary-active" onClick={handleViewToCart}>
+              View Cart
+            </p>
             <FooterLink>Our Menu</FooterLink>
             <FooterLink to="booking">Book service</FooterLink>
             <FooterLink

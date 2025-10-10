@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from "react";
+import { scroller } from "react-scroll";
 
 const AppContext = createContext();
 
@@ -16,6 +17,16 @@ export function AppProvider({ children }) {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
+  function handleViewToCart() {
+    scroller.scrollTo("nav", {
+      smooth: true,
+      duration: 600,
+      offset: 0,
+    });
+
+    setIsOpenCart((isOpenCart) => !isOpenCart);
+  }
+
   return (
     <AppContext.Provider
       value={{
@@ -27,6 +38,7 @@ export function AppProvider({ children }) {
         setCart,
         isOpenCart,
         setIsOpenCart,
+        handleViewToCart,
       }}
     >
       {children}

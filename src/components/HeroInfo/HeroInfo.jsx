@@ -17,10 +17,9 @@ import { fadeUpSection } from "../../Utils/helpers";
 import { motion } from "motion/react";
 import { useContext } from "react";
 import { AppContext } from "../../contexts/AppContext";
-import { scroller } from "react-scroll";
 
 function HeroInfo() {
-  const { setCart, setIsOpenCart } = useContext(AppContext) || [];
+  const { setCart, handleViewToCart } = useContext(AppContext) || [];
 
   function handleAddToCart(product) {
     setCart((prevCart) => {
@@ -49,15 +48,6 @@ function HeroInfo() {
     setCart((prevCart) =>
       prevCart.filter((item) => item.title !== product.title)
     );
-  }
-  function handleViewToCart() {
-    scroller.scrollTo("nav", {
-      smooth: true,
-      duration: 600,
-      offset: 0,
-    });
-
-    setIsOpenCart((isOpenCart) => !isOpenCart);
   }
 
   const settings = {

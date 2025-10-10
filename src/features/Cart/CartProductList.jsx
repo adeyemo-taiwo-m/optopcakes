@@ -6,8 +6,36 @@ import useOutsideClick from "../../hooks/useOutsideClick";
 import Button from "../../ui/Button";
 
 function CartProductList() {
-  const { cart, setIsOpenCart } = useContext(AppContext) || [];
+  const { cart, setCart, setIsOpenCart } = useContext(AppContext) || [];
   const modalRef = useOutsideClick(() => setIsOpenCart((isOpen) => !isOpen));
+
+  function handleOrder() {
+    const orderDetails = cart.map((item, i) => {
+      const title = item.title;
+      const price = item.price;
+      const quantity = item.quantity;
+      const total = item.totalPrice;
+
+      const items = ` Item ${
+        i + 1
+      }\n Title : ${title} \n Price: ${price} \n Quantity: ${quantity}\n Sum : ${total}\n`;
+
+      return items;
+    });
+    const totalPrice = cart.reduce((total, item) => total + item.totalPrice, 0);
+
+    const itemsDetails = orderDetails.join("\n");
+    const message = `${itemsDetails}\nTotal Order is ${totalPrice}`;
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappNumber = "2348032822302";
+    // Send to whatsapp
+    window.open(
+      `https://wa.me/${whatsappNumber}?text=${encodedMessage}`,
+      "_blank"
+    );
+
+    setCart([]);
+  }
 
   return (
     <Element name="cart">
@@ -24,7 +52,7 @@ function CartProductList() {
         ) : (
           <div className="space-y-3 flex-col gap-2">
             <div className="grid grid-cols-[2fr_1fr_1fr_1fr] gap-4 text-sm border-t border-gray-200">
-              {/* Header Row (optional) */}
+              {/* Header Row */}
               <div className="font-semibold text-gray-700 py-2">Product</div>
               <div className="font-semibold text-gray-700 py-2 text-center">
                 Price
@@ -53,8 +81,20 @@ function CartProductList() {
                   </p>
                 </React.Fragment>
               ))}
+
+              {/* Order Total Row */}
+              <div className="col-span-3 text-right font-semibold text-gray-700 py-3 border-t border-gray-200">
+                Total Order
+              </div>
+              <div className="text-right font-bold text-secondary-default py-3 border-t border-gray-200">
+                {formatCurrency(
+                  cart?.reduce((total, item) => total + item.totalPrice, 0)
+                )}
+              </div>
             </div>
-            <Button className={"w-full "}>Order now</Button>
+            <Button onClick={handleOrder} className={"w-full "}>
+              Order now
+            </Button>
           </div>
         )}
       </div>

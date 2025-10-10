@@ -7,9 +7,8 @@ import { scroller } from "react-scroll";
 import CartProductList from "../../features/Cart/CartProductList";
 
 function NavButtons() {
-  const { isOpenNav, setIsOpenNav, isOpenCart } = useContext(AppContext);
+  const { setIsOpenNav, isOpenCart } = useContext(AppContext);
 
-  console.log(isOpenNav);
   return (
     <div>
       <div>
