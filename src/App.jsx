@@ -9,6 +9,7 @@ import Testimonials from "./components/Testimonial/Testimonials";
 import Booking from "./components/Booking/Booking";
 import FAQ from "./components/FAQ Section/FAQ";
 import Footer from "./components/Footer/Footer";
+import AboutCEO from "./ui/AboutCEO";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Testimonials />
       <Booking />
       <FAQ />
+      <AboutCEO />
       <Footer />
 
       {/* <MotionTest /> */}

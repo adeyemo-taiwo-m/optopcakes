@@ -60,7 +60,7 @@ function Footer() {
             <p className="hover:text-primary-active" onClick={handleViewToCart}>
               View Cart
             </p>
-            <FooterLink>Our Menu</FooterLink>
+            <FooterLink to="services">Our Menu</FooterLink>
             <FooterLink to="booking">Book service</FooterLink>
             <FooterLink
               to={

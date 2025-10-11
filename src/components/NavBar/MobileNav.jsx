@@ -8,6 +8,7 @@ import { AppContext } from "../../contexts/AppContext";
 import { AnimatePresence, motion } from "motion/react";
 import { slideDown } from "../../Utils/helpers";
 import useOutsideClick from "../../hooks/useOutsideClick";
+import { scroller } from "react-scroll";
 
 function MobileNav() {
   const excludeRef = createRef(null);
@@ -42,14 +43,24 @@ function MobileNav() {
               <MobileNavItem to="testimonials">Testimonials</MobileNavItem>
 
               <li className="mt-2 ml-4 flex flex-col gap-4 w-full">
-                <Button className=" !text-primary-default     bg-white  hover:bg-primary-light">
+                <a
+                  href="https://wa.me/2348032822302"
+                  className=" text-primary-default  rounded-sm !text-sm   justify-center items-center flex gap-2 px-4 py-3    bg-white  hover:bg-primary-light"
+                >
                   Contact Us
-                </Button>
+                </a>
                 <Button
+                  onClick={() => {
+                    scroller.scrollTo("booking", {
+                      smooth: true,
+                      duration: 600,
+                      offset: 0,
+                    });
+                  }}
                   type="secondary"
                   className="!border-primary-light  hover:border-primary-light  hover:!text-primary-default hover:!bg-white text-white"
                 >
-                  Order now
+                  Book now
                 </Button>
               </li>
             </ul>
