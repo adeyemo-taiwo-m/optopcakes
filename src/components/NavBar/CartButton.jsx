@@ -7,12 +7,12 @@ import { motion } from "motion/react";
 
 function CartButton() {
   const { cart, setIsOpenCart } = useContext(AppContext);
-  const toggleCart = () => setIsOpenCart((isOpen) => !isOpen);
+  const toggleCart = () => setIsOpenCart((prev) => !prev);
 
   return (
     <motion.div
       onHoverStart={toggleCart}
-      onClick={() => toggleCart()}
+      onClick={toggleCart}
       className="relative scale-80 tab:scale-100 cursor-pointer"
     >
       <button>

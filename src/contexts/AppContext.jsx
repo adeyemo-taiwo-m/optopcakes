@@ -29,7 +29,6 @@ export function AppProvider({ children }) {
 
     setIsOpenCart((isOpenCart) => !isOpenCart);
   }
-  console.log(openServiceModal);
   return (
     <AppContext.Provider
       value={{

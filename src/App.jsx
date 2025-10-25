@@ -10,10 +10,12 @@ import Booking from "./components/Booking/Booking";
 import FAQ from "./components/FAQ Section/FAQ";
 import Footer from "./components/Footer/Footer";
 import AboutCEO from "./ui/AboutCEO";
+import { Analytics } from "@vercel/analytics/next";
 
 function App() {
   return (
     <div className="flex flex-col gap-10 ">
+      <Analytics />
       <HeroVector />
       <NavBar />
       <Hero />
